@@ -2,8 +2,8 @@ import numpy as np
 import sounddevice as sd
 
 # Parameters
-frequency = 4186.01  # Frequency in Hz
-duration = 2        # Duration in seconds
+frequency = 18000.01 # Frequency in Hz... highest humans can hear is 20000 Hz
+duration = 2 # Duration in seconds
 sample_rate = 44100 # Standard audio sampling rate
 
 # Generate time array
@@ -14,4 +14,4 @@ tone = np.sin(2 * np.pi * frequency * t)
 
 # Play the tone
 sd.play(tone, sample_rate)
-sd.wait()  # Wait until the sound finishes playing
+sd.wait() # Wait until the sound finishes playing
